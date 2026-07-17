@@ -1,8 +1,6 @@
 from pathlib import Path
 
-from langchain_community.document_loaders import (
-    UnstructuredPDFLoader,
-)
+from langchain_community.document_loaders import  UnstructuredPDFLoader
 
 
 def load_document(file_path: str):

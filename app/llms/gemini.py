@@ -1,14 +1,21 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
+import google.generativeai as genai
 
 
 def get_llm():
     """
-    Initialize and return the Gemini chat model.
+    Returns the LangChain chat model.
     """
 
-    llm = ChatGoogleGenerativeAI(
+    return ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",
         temperature=0,
     )
 
-    return llm
+
+def get_vision_model():
+    """
+    Returns the Gemini Vision model.
+    """
+
+    return genai.GenerativeModel("gemini-2.5-flash")

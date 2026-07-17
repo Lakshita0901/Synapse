@@ -1,0 +1,11 @@
+from langchain_community.document_loaders import Docx2txtLoader
+
+
+def load_docx(file_path: str):
+    """
+    Load a DOCX document.
+    """
+
+    loader = Docx2txtLoader(file_path)
+
+    return loader.load()
